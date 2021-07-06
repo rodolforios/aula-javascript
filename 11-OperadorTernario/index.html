@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operador Ternário</title>
+    <script>
+
+        // var resultado = <condição> ? <verdadeiro> : <falso>
+
+
+        var nota = prompt('Digite a nota do aluno: ')
+        var nota = parseInt(nota)
+        var faltas = prompt('Digite a Quantidade de faltas: ')
+        var faltas = parseInt(faltas)
+        var media = 7
+        var faltas_maximas = 15
+
+        // ele divide a condição em três partes
+
+        var resultado = nota>=media && faltas <=faltas_maximas? 'Aprovado': 'Reprovado'
+        document.write(resultado)
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
