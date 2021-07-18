@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexibilidade de parametros</title>
+
+    <script>
+        function soma(a, b) {
+            return a + b
+        }
+
+        console.log(soma(2, 3)) // O resultado será 5
+        console.log(soma(2, 3, 4)) // O js irá ignorar o terceiro número.
+        console.log(soma(2, 3, 4, 5)) // o js irá ignorar o quarto número
+        console.log(2) // O js irá considerar o B como undefined e portanto o resultado será NaN
+        console.log() //O js irá considerar o A e B como undefined e portanto o resultado será NaN
+            //Para corrigir isso uma das soluções é usar uma condição ternária a = b=== undefined?0:
+    </script>
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

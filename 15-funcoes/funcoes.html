@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -9,29 +9,24 @@
 </head>
 
 <script>
+    //void
+    //retorno
 
-//void
-      //retorno
+    var largura = prompt('Digite a largura do terreno em metros')
+    var comprimento = prompt('Digite o comprimento do terreno em metros')
 
-      var largura = prompt('Digite a largura do terreno em metros')
-      var comprimento = prompt('Digite o comprimento do terreno em metros')
+    var area = calcularAreaTerreno(largura, comprimento)
 
-      var area = calcularAreaTerreno(largura, comprimento)
+    document.write('O terreno possui ' + area + ' metros quadrados')
 
-      document.write('O terreno possui ' + area + ' metros quadrados')
+    function calcularAreaTerreno(largura, comprimento) {
 
-      function calcularAreaTerreno ( largura, comprimento ) {
-      
         //lógica
         var area = largura * comprimento
 
         return area
 
-      }
-
-
-
-
+    }
 </script>
 
 <body>
