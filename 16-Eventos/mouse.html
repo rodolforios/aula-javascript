@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse</title>
+    <script>
+function acao(){
+    alert('Evento disparado')
+}
+    </script>
+
+    <style>
+        .caixa {
+            background: #ccc;
+            height: 150px;
+            width: 150px;
+            cursor: pointer;
+        }
+
+        .container {
+            width: 600px;
+            height: 800px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div onclick="acao()" class="caixa"></div> <!-- onclick é acionado ao ser clicado -->
+        <div ondblclick="acao()" class="caixa"></div><!-- ondblclick é acionado ao clicar duas vezes-->
+        <div onmouseup="acao()" class="caixa"></div> <!-- Quando vc clicar e soltar ele é ativado -->
+        <div onmouseover="acao()" class="caixa"></div> <!-- É ativado ao passar o ponteiro do mouse sobre o local -->
+        <div onmouseout="acao()" class="caixa"></div> <!-- Quando vc coloca o mouse por cima de um item, ao retirar é disparada a ação. -->
+    </div>
+</body>
+
+</html>
