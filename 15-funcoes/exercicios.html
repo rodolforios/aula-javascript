@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios</title>
+
+    <script>
+
+        var num1 = prompt('Digite um número: ')
+        
+        var num2 = prompt ('Digite outro número: ')
+        
+        var operacao = prompt('digite 1 para soma e 2 para subtração')
+        num1 = parseInt(num1)
+        num2 = parseInt(num2)
+        operacao = parseInt (operacao)
+
+
+        switch(operacao){
+    case 1 :
+    // Se paramentro ===1
+    document.write('O resultado é: '+(num1+num2))
+    break
+
+    case 2 :
+    document.write('O resultado é: '+(num1-num2))
+    // se parametro === 2
+    break
+    default:
+
+    document.write('Digite uma opção válida...')
+}
+
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>
