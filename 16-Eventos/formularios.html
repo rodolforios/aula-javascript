@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+
+    <script>
+
+    </script>
+
+    <style>
+
+
+        label,input{
+            display: block;
+        }
+        label{
+            margin-top: 30px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <input onfocus="console.log('Recebeu o foco')"onblur="console.log('Perdeu o foco')" type="text">
+    <!-- <label for="">onfocus(Quando pressionar a tecla)</label>
+    <input onfocus="console.log('teste onfocus')" type="text">
+
+    <label for="">onblur(Quando soltar  a tecla)</label>
+    <input onblur="acao1()" type="text">
+
+    <label for="">onchange(Quando pressionar a tecla mas só se a tecla represenstar um caractere.)</label>
+    <input onchange="acao1()" type="text"> -->
+
+    <select onchange="console.log('Estado foi modificado')" name="" id="">
+        <option>----Select----</option>
+        <option value="1">Primeira opção</option>
+        <option value="2">Segunda opção</option>
+    </select>
+</body>
+    
+</body>
+</html>
