@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com o DOM</title>
+</head>
+
+<style>
+    body {
+        background: rgb(68, 125, 199);
+        color: white;
+        font: normal 18pt Arial;
+    }
+</style>
+
+<body>
+    <H1>Iniciando estudos <strong>DOM</strong></H1>
+    <p>Aqui vai o resultado</p>
+    <p>Iniciando estudos <strong>DOM</strong> em Javascript</p>
+    <div id="msg">Clique em mim</div>
+
+    <script>
+        /*
+                //POR MARCA
+               // getElementsByTagName()
+            //alterando um paragrafo
+           // var p1 = window.document.getElementsByTagName('p')[1]
+            //document.write(p1.innerText)    
+            //p1.style.color='blue'
+        
+        
+            //alterando o background do body
+            //var corpo = window.document.body
+           // corpo.style.background='black'
+            
+            //Para puxar um elemento com o texto exatamento igual:
+           // document.write(p1.innerHTML)
+        
+           /// window.alert(p1.innerText)
+        
+            //POR ID
+            //getElementsByid()
+            //var d = window.document.getElementById('msg')
+           // d.style.background='green'
+            //d.innerText='Estou aguardando...'
+           
+           // window.document.getElementById('msg').innerText = 'Olá'
+        
+               
+        
+            //POR NOME
+            getElementsByName()
+            var d = window.document.getElementsByName('msg')[0]
+                d.innerText='olá'
+            
+                //POR CLASSE
+               // getElementsByClassName()
+               var d = window.document.getElementsByClass('msg')[0]
+                d.innerText='olá'
+        
+        
+        */
+        //POR SELETOR
+        // querySelector()
+        // querySelectorAll()
+
+        var d = window.document.querySelector('div#msg')
+        //#para id e . para classe
+        d.style.color='blue'
+
+    </script>
+
+</body>
+
+</html>
