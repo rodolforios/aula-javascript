@@ -56,7 +56,7 @@ div#exib{
 }
 select{
     width: fit-content;
-    height: 100px;
+    height: 200px;
     overflow-y: scroll;
     font:normal 16px Arial;
     border:1px solid #f2f2;
