@@ -1,18 +1,44 @@
-function contar(){
-var fini = document.querySelector('div#txtini')
-var ffim = document.querySelector('div#txtfim')
-var fpas = 3
+function contar() {
 
 
-document.write('esse '+ fini +'numero ' + ffim +'chato é ' +fpas)
+    var fini = document.getElementById('txtini')
+    var ffim = document.getElementById('txtfim')
+    var fpas = document.getElementById('txtpasso')
 
-/*
-while(inicio < fim){
+    var nini = Number(fini.value)
+    var nfim = Number(ffim.value)
+    var npas = Number(fpas.value)
 
-    res.innerHTML=`Passo ${inicio}.`
-    inicio+=passo
+    var res = document.querySelector('div#res')
 
-}
- */   
+
+
+
+
+    if (ffim.value.length == 0) {
+        alert(`Digite um número no campo fim`)
+    } else if (nini < nfim) {
+        res.innerHTML = `Contando...`
+        while (nini <= nfim) {
+
+            res.innerHTML += `👉${nini}`
+            nini = (nini + npas)
+
+        }
+
+
+    } else {
+        res.innerHTML = `Contando...`
+        while (nfim <= nini) {
+
+            res.innerHTML += `👉${nini}`
+            nini = (nini - npas)
+
+        }
+    }
+
+
+
+    res.innerHTML += `🏁`
 
 }
