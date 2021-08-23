@@ -4,41 +4,42 @@ function contar() {
     var fini = document.getElementById('txtini')
     var ffim = document.getElementById('txtfim')
     var fpas = document.getElementById('txtpasso')
-
     var nini = Number(fini.value)
     var nfim = Number(ffim.value)
     var npas = Number(fpas.value)
 
     var res = document.querySelector('div#res')
+    res.innerHTML = `Contando...`
+
+    if(npas == 0){
+        npas = 1
+        window.alert('Passo inválido considerando Passo 1')
+    }
 
 
+    if (fini.value.length == 0 || ffim.value.length == 0 || fpas.value.length == 0) {
+        alert(`Preencha todos os campos`)
+    }else if (nini < nfim) {
 
-
-
-    if (ffim.value.length == 0) {
-        alert(`Digite um número no campo fim`)
-    } else if (nini < nfim) {
-        res.innerHTML = `Contando...`
         while (nini <= nfim) {
 
-            res.innerHTML += `👉${nini}`
+            res.innerHTML += `\u{1F449}${nini}` //U+1F449
             nini = (nini + npas)
 
         }
 
-
     } else {
-        res.innerHTML = `Contando...`
+
         while (nfim <= nini) {
 
-            res.innerHTML += `👉${nini}`
+            res.innerHTML += `\u{1F449}${nini}` //U+1F449
             nini = (nini - npas)
 
         }
+        res.innerHTML += `\u{1F3C1}`
     }
 
 
-
-    res.innerHTML += `🏁`
+    
 
 }
