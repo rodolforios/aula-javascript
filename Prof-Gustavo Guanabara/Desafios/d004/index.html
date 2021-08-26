@@ -27,9 +27,11 @@
     <h1>Calculando o troco</h1>
 
     <p onclick="iniciar()">Comprar produto</p>
+    
 
     <script>
         function iniciar() {
+
             var prod = prompt('Que produto você está comprando? ')
             var cust = Number(prompt(`Quanto custa o ${prod} que você está comprando?`))
             var valorPago = Number(prompt(`Qual foi o valor que você deu para pagar o ${prod}?`))
