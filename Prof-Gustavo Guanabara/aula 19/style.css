@@ -1,30 +1,26 @@
-body{
-background: rgb(70, 142, 236);
-font: normal 15pt Arial;
-
+body {
+    background: rgb(70, 142, 236);
+    font: normal 15pt Arial;
 }
 
-header{
-color:white;
-text-align: center;
-
+header {
+    color: white;
+    text-align: center;
 }
 
-section{
-background: white;
-border-radius:10px;
-padding: 15px;
-width: 500px;
-margin:auto;
-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.486);
-
+section {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.486);
 }
 
-footer{
-    color:white;
+footer {
+    color: white;
     text-align: center;
     font-style: italic;
-
 }
 
 /*
@@ -33,35 +29,34 @@ div{
 }
 
 */
-div{
-    
-    
-}
-input{
+
+div {}
+
+input {
     margin: 20px 0;
 }
-input[type=number]{
-    width: 150px;
-    
 
+input[type=number] {
+    width: 150px;
 }
-div#exib{
+
+div#exib {
     width: fit-content;
     height: 100px;
     overflow-y: scroll;
-    font:normal 16px Arial;
-    border:1px solid #f2f2;
-    
-
+    font: normal 16px Arial;
+    border: 1px solid #f2f2;
 }
-select{
+
+select {
     width: fit-content;
     height: 200px;
     overflow-y: scroll;
-    font:normal 16px Arial;
-    border:1px solid #f2f2;
-    
-
+    font: normal 16px Arial;
+    border: 1px solid #f2f2;
 }
 
-
+#flista {
+    display: block;
+    width: 170px;
+}
