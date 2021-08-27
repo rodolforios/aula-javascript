@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular desconto</title>
+</head>
+
+<style>
+    h1 {
+        margin-bottom: 80px;
+    }
+
+    p {
+        border: 1px solid #3f3d3d;
+        width: fit-content;
+        font: normal 18px Arial;
+        padding: 20px;
+
+        background-color: #f2f2f2;
+    }
+
+    #res {
+        font: bold 24px Arial;
+        margin-bottom: 20px;
+    }
+    #res2 {
+        font: normal 18px Arial;
+        line-height: 20px;
+    }
+</style>
+
+<body>
+    <h1>Calcular desconto</h1>
+
+    <p onclick="iniciar()">Desconto de 10%</p>
+
+    <div id="res"></div>
+    <div id="res2">Clique no botão acima para iniciar</div>
+
+
+    <script>
+        function iniciar() {
+            var produto = prompt('Qual é o produto que você está comprando?')
+            var preco = Number(prompt(`Qual o preço do ${produto}?`))
+            var desconto = (preco*0.10)
+            var prodDesconto =(preco*0.90)
+
+
+            var prod=produto.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+            var prco = preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+            var desc = desconto.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+            var pfinal= prodDesconto.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+            var res = document.querySelector(`div#res`)
+            var res2 = document.querySelector(`div#res2`)
+            //.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+
+            res.innerHTML = `Calculando desconto de 10% para ${produto} `
+            res2.innerHTML = `O Preço original era ${prco}. <br><br> Você acaba de ganhar ${desc} (-10%). <br><br> No fim, você vai pagar ${pfinal} no produto ${produto}.`
+
+
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>
