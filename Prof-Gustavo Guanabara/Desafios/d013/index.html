@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Situação do aluno</title>
+</head>
+
+<style>
+    h1 {
+        margin-bottom: 80px;
+    }
+
+    p {
+        border: 1px solid #3f3d3d;
+        width: fit-content;
+        font: normal 18px Arial;
+        padding: 20px;
+
+        background-color: #f2f2f2;
+    }
+
+    #res {
+        font: bold 24px Arial;
+        margin-bottom: 20px;
+    }
+
+    #res2 {
+        font: normal 18px Arial;
+        line-height: 20px;
+    }
+</style>
+
+<body>
+    <h1>Situação do aluno</h1>
+
+    <p onclick="iniciar()">Entrar com as notas</p>
+
+    <div id="res"></div>
+    <div id="res2">Clique no botão acima para informar as notas do aluno.</div>
+
+
+    <script>
+        //&#916;
+        function iniciar() {
+
+            var nome = prompt(`Qual o nome do aluno`)
+            var n1 = Number(prompt(`Primeira nota de ${nome}:`))
+            var n2 = Number(prompt(`Segunda nota de ${nome}:`))
+            var media = ((n1 + n2) / 2).toFixed(1)
+            var res = document.querySelector(`div#res`)
+            var res2 = document.querySelector(`div#res2`)
+
+            if (media < 3) {
+                res.innerHTML=`Analisando a situação de ${nome}`
+                res2.innerHTML=`com as notas ${n1} e ${n2}, <strong>a média é de ${media}</strong> <br><br>Com média abaixo de 3.0 o anuno está REPROVADO!`
+            } else if (media >= 3 && media < 6) {
+                res.innerHTML=`Analisando a situação de ${nome}`
+                res2.innerHTML=`com as notas ${n1} e ${n2}, <strong>a média é de ${media}</strong> <br><br>Com média entre 3.0 e 6.0 o aluno está em RECUPERAÇÃO!`
+            } else {
+                res.innerHTML=`Analisando a situação de ${nome}`
+                res2.innerHTML=`com as notas ${n1} e ${n2}, <strong>a média é de ${media}</strong> <br><br>Com média acima de 6.0 o aluno está APROVADO!`
+            }
+
+
+
+            /*
+ 
+ 
+             
+             //.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+ 
+             
+ */
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>
