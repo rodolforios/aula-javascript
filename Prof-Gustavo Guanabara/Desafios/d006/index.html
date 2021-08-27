@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperaturas</title>
+</head>
+
+<style>
+    h1 {
+        margin-bottom: 80px;
+    }
+
+    p {
+        border: 1px solid #3f3d3d;
+        width: fit-content;
+        font: normal 18px Arial;
+        padding: 20px;
+
+        background-color: #f2f2f2;
+    }
+    #res{
+        font:bold 18px Arial;
+        margin-bottom: 20px;
+    }
+</style>
+
+<body>
+    <h1>Conversor de Medidas</h1>
+
+    <p onclick="iniciar()">Converter</p>
+
+    <div id="res"></div>
+    <div id="res2">clique no botão acima para iniciar</div>
+
+
+    <script>
+        function iniciar() {
+            
+            var cel = Number( prompt('Digite uma Temperatura em ºC(celsius) (m) '))
+            
+            var res = document.querySelector('div#res')
+            var res2 = document.querySelector('div#res2')
+            var fah = ((cel*1.8)+32)
+            var kel =(cel+273.15)
+            
+
+            res.innerHTML =`A temperatura de ${cel},corresponde a...<br> `
+            res2.innerHTML=` ${kel.toFixed(2)}°K(Kelvin)<br><br>  ${fah.toFixed(2)}°F(Fahrenheit) `
+
+            
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>
