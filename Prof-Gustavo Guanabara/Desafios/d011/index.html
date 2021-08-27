@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formula de Bhaskara</title>
+</head>
+
+<style>
+    h1 {
+        margin-bottom: 80px;
+    }
+
+    p {
+        border: 1px solid #3f3d3d;
+        width: fit-content;
+        font: normal 18px Arial;
+        padding: 20px;
+
+        background-color: #f2f2f2;
+    }
+
+    #res {
+        font: bold 24px Arial;
+        margin-bottom: 20px;
+    }
+
+    #res2 {
+        font: normal 18px Arial;
+        line-height: 20px;
+    }
+</style>
+
+<body>
+    <h1>Resolvendo Bhaskara</h1>
+
+    <p onclick="iniciar()">Calcular</p>
+
+    <div id="res"></div>
+    <div id="res2">Considerando uma equação no formato ax<sup>2</sup> + bx + c = 0  ,aperte <br><br> o botão acima para calcular o valor de &#916;.</div>
+
+
+    <script>
+        //&#916;
+        function iniciar() {
+            
+            var a = Number(prompt(`Qual é o valor de a?`))
+            var b = Number(prompt(`Qual é o valor de b?`))
+            var c = Number(prompt(`Qual é o valor de c?`))
+            var result = ((b*b)-4*a*c)
+            
+
+
+           
+
+
+            var res = document.querySelector(`div#res`)
+            var res2 = document.querySelector(`div#res2`)
+            //.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+
+            res.innerHTML = ` A equação atual é ${a}x<sup>2</sup> + ${b}x + ${c} = 0`
+            res2.innerHTML = `O cálculo realizado será &#916; = ${b}<sup>2</sup> - 4.${a}.${c} <br> <br> O valor calculado foi &#916; = ${result}`
+
+
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O preço mudou</title>
+</head>
+
+<style>
+    h1 {
+        margin-bottom: 80px;
+    }
+
+    p {
+        border: 1px solid #3f3d3d;
+        width: fit-content;
+        font: normal 18px Arial;
+        padding: 20px;
+
+        background-color: #f2f2f2;
+    }
+
+    #res {
+        font: bold 24px Arial;
+        margin-bottom: 20px;
+    }
+
+    #res2 {
+        font: normal 18px Arial;
+        line-height: 20px;
+    }
+</style>
+
+<body>
+    <h1>Preço mudou</h1>
+
+    <p onclick="iniciar()">verificar.</p>
+
+    <div id="res"></div>
+    <div id="res2">Clique no botão acima para verificar a mudança de preço.</div>
+
+
+    <script>
+        function iniciar() {
+            
+            var precoAnterior = Number(prompt(`Qual é o preço anterior?`))
+            var precoAtual = Number(prompt(`Qual o preço atual?`))
+            //var percent = (((precoAnterior*100).toFixed(1)/precoAtual)-100).toFixed(1)
+            var diferenca = (precoAtual-precoAnterior)
+            var res = document.querySelector(`div#res`)
+            var res2 = document.querySelector(`div#res2`)
+
+
+            var pAnt = precoAnterior.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
+            var pAtu = precoAtual.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
+            var dif = diferenca.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+            
+            //.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+
+            
+            
+
+
+            if(diferenca>0){
+                res.innerHTML = `Analisando os valores informados  `
+                res2.innerHTML = `O produto custava ${pAnt} e agora custa ${pAtu}.<br><br> Hoje o produto está mais caro.<br><br> O preço subiu ${dif} em relação ao preço anterior<br><br> `
+            }else{
+                res.innerHTML = `Analisando os valores informados  `
+                res2.innerHTML = `O produto custava ${pAnt} e agora custa ${pAtu}.<br><br> Hoje o produto está mais barato.<br><br>O preço desceu ${dif} em relação ao preço anterior<br><br>`
+
+            }
+
+
+        }
+
+        
+
+
+
+    </script>
+
+</body>
+
+</html>
