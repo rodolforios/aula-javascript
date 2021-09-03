@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" name="txtObj" id="textObj">
+    <input id="txtAdi" type="submit" value="Adicionar" onclick="adicionar()">
+    <input id="txtOrd" type="submit" value="Ordenar" onclick="ordenar()">
+
+    <div id="res"></div>
+
+
+    <script>
+
+        var objeto = Array('Cadeira', 'Impressora', 'Garfo')
+
+        var res = document.querySelector('div#res')
+
+
+        function adicionar() {
+            var itemLista = document.getElementById('textObj')
+            item = itemLista.value
+            if (item.length == 0 || item.indexOf(item) != 0) {
+                alert('Digite um objeto válido e que não seja repetido!')
+            } else {
+                objeto.push(item)
+                objeto.sort()
+                document.getElementById('textObj').value = ''
+            }
+
+        }
+        function ordenar() {
+
+
+            res.innerHTML += `${objeto}<br><input id="txlimpar" type="submit" value="Limpar" onclick="limpar()">`
+        }
+
+        function limpar() {
+            res.innerHTML = ``
+        }
+
+
+    </script>
+</body>
+
+</html>
