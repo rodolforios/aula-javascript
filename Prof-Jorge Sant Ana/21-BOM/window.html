@@ -9,7 +9,7 @@
 </head>
 <script>
     function abrirPopUp() {
-        janela = window.open('http://www.google.com.br', 'nova_janela', 'width=500, height=500')
+        janela = window.open('https://rodolforios.github.io/Script-de-atendimento/index.html', 'nova_janela', 'width=500, height=500')
     }
     function fecharPopUp() {
         janela.close()
@@ -23,10 +23,14 @@
     <button onclick="abrirPopUp()">Abrir janela</button>
     <button onclick="fecharPopUp()">Fechar janela</button>
     <button onclick="window.print()">Imprimir página</button>
+    <button onclick="window.confirm('clique em confirmar')">Confirmar</button>
+    
 </body>
 
 
 <!--
+    https://www.w3schools.com/jsref/obj_window.asp
+
 window.open() - abre uma nova janela
 window.close() - fecha a janela atual
 window.moveTo() - mover a janela atual
