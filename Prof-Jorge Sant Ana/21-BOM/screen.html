@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <script>
+
+//https://www.w3schools.com/jsref/obj_screen.asp
+
+var altura= window.screen.availHeight   
+var largura = window.screen.availWidth
+
+
+if (largura < 500){
+    document.write('Lógica para impressão do menu versão mobile <br/>')
+}else{
+    document.write('Lógica para impressão do menu versão web <br/>')
+}
+
+document.write(`A altura do navegador é ${altura} <br/>` )
+document.write(` A largura do navegador é ${largura}` )
+    </script>
+</body>
+</html>
