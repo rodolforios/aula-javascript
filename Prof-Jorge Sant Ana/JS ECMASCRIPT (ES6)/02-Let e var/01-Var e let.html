@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Babel</title>
+</head>
+
+<body>
+
+
+    <div id="output"></div>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        // Existem 3 escopos: golbal, funccção e bloco.
+
+       
+
+        //var serie = "Friends"
+        // function x(){
+
+        //     var serie = "Game Of Thrones"
+        //     console.log('função: ' + serie)
+        //     if(true){
+        //         console.log('bloco dentro da função: '+serie)
+        //     }
+        // }
+
+        // x()
+
+        // if(true){
+        //     console.log('global: '+ serie)
+        // }
+        //---------------------------------------------------------------------------
+        // function x() {
+
+        //     console.log('dentro da função: ' + serie)
+
+        //     if (true) {
+        //         //var serie = 'The Walking Dead'
+
+        //     }
+        // }
+
+        // x()
+        // if (true) {
+        //     var serie = 'The Walking Dead'
+        //   //  x()
+        //     console.log(serie)
+        // }
+
+        // console.log(serie)
+        //---------------------------------------------------------------------------
+
+        if(true){
+            let serie = "Friends";
+            console.log(serie)
+        }
+        console.log(serie)
+        
+
+        //Var pode ter hosting mas let só pode ser usada dentro do escopo que estiver.
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Babel</title>
+</head>
+
+<body>
+
+
+    <div id="output"></div>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+
+    /* Com var
+        var serie = 'Friends'
+        {
+           var serie = "The Walking Dead"
+            console.log('dentro do bloco: ' + serie)
+        }
+        console.log('fora do bloco: ' + serie)
+*/
+        //com let
+        var serie = 'Friends'
+        {
+           let serie = "The Walking Dead"
+            console.log('dentro do bloco: ' + serie)
+        }
+        console.log('fora do bloco: ' + serie)
+
+
+
+    </script>
+
+
+</body>
+
+</html>
