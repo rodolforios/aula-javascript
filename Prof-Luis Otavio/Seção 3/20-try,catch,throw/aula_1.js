@@ -31,4 +31,3 @@ try {
     console.log(error);
     //teste de commit 2
 }
-console.log('teste3')
