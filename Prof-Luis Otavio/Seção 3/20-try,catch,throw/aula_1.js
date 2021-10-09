@@ -11,11 +11,10 @@ try{
 */
 function soma(x, y) {
 
-    if
-        (
+    if (
         typeof x !== 'number' ||
         typeof y !== 'number'
-        ) {
+    ) {
         throw ('x e y precisam ser números.');
     }
     return x + y;
@@ -23,11 +22,13 @@ function soma(x, y) {
 
 }
 
-try{
+try {
 
-console.log(soma(456, 1547));
-console.log(soma('12', 1547));
+    console.log(soma(456, 1547));
+    console.log(soma('12', 1547));
 
-}catch(error){
+} catch (error) {
     console.log(error);
+    //teste de commit 2
 }
+console.log('teste3')
