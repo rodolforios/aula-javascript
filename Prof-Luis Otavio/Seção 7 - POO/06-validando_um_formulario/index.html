@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -19,24 +20,25 @@
       <li>Usuário deverá ter entre 3 e 12 caracteres</li>
       <li>Senha precisa ter entre 6 e 12 caracteres</li>
     </ul>
-<form action="/" method="post" class="formulario">
-  
-      <label for="nome"> <br>
-      <input type="text" name="nome" id="nome">
-      <label for="nome">Sobrenome:</label> <br>
-      <input type="text" name="Sobrenome" id="Sobrenome">
-      <label for="nome">CPF:</label> <br>
-      <input type="text" name="cpf" id="cpf">
-      <label for="nome">Usuário:</label> <br>
-      <input type="text" name="usuario" id="usuario">
-      <label for="nome">Senha:</label> <br>
-      <input type="password" name="senha" id="senha">
-      <label for="nome">Repetir Senha:</label> <br>
-      <input type="password" name="rsenha" id="rsenha">
-      <input type="submit" value="Enviar" id="btnEnviar">
-</form>
+    
+    <form action="/" method="POST" class='formulario'>
+      <label>Nome</label>
+      <input type="text" class="nome validar">
+      <label>Sobrenome</label>
+      <input type="text" class="sobrenome validar">
+      <label>CPF</label>
+      <input type="text" class="cpf validar">
+      <label>Usuário</label>
+      <input type="text" class="usuario validar">
+      <label>Senha</label>
+      <input type="password" class="senha validar">
+      <label>Repetir Senha</label>
+      <input type="password" class="repetir-senha validar">
+      <button type="submit">Enviar</button>
+    </form>
   </section>
 
+  <script src="./assets/js/validaCPF.js"></script>
   <script src="./assets/js/main.js"></script>
 </body>
 
