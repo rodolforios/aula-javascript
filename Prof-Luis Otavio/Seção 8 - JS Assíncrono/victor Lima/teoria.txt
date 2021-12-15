@@ -1,0 +1,51 @@
+No JavaScript existem 3 formas de trabalhar com programação assíncrona
+
+- Async/Await
+
+- Promise
+
+- CallBack
+
+
+************Callback************
+
+
+CallBack é você ter uma função que você liga ao um metodo assíncrono que vc tem e quando esse metodo assíncrono 
+é cloncluído, essa função é chamada.
+
+(quando encerrar chame a função X)
+
+
+
+
+
+
+********************************
+
+************Promise************
+
+Promise é uma evolução do CallBack, é uma forma mais sofisticada de lidar com callback e programação assíncrona.
+
+Uma promessa pode ser cumprida mas também pode ser rejeitada
+
+email=> Resolvida: "OK" || Reject:"Falha"
+
+save => Resolvida: "Dado salvo" || Reject:"Ocorreu um erro,foi mal :("
+
+
+
+no caso de positivo é usado o .then
+no caso de não cumprimento da promessa é usado .catch()
+
+ao trabalhar com promises é obrigarório usar .then() e .catch
+
+
+Ao contrário do callback, não é possível usar diversos parâmetros, a forma de contornar isso
+ é escrevendo como se fosse um json 
+
+ EX: resolve({time:6, to: "victor@udemy.com"})
+
+********************************
+
+
+
