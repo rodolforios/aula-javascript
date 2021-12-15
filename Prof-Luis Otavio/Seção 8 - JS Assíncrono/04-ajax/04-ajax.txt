@@ -1,0 +1,18 @@
+/*
+Asynchronous JavaScript and XML
+
+JavaScript assíncrono e XML , embora não seja uma tecnologia em si, é um termo cunhado em 2005 por Jesse James Garrett, 
+que descreve uma "nova" abordagem para usar várias tecnologias existentes juntas, incluindo HTML ou XHTML , CSS , 
+JavaScript , DOM , XML , XSLT e, o mais importante, o XMLHttpRequestobjeto. Quando essas tecnologias são combinadas no 
+modelo Ajax, os aplicativos da web são capazes de fazer atualizações rápidas e incrementais na interface do usuário sem 
+recarregar a página inteira do navegador. Isso torna o aplicativo mais rápido e responsivo às ações do usuário.
+
+Embora X em Ajax signifique XML, JSON é preferido em vez de XML hoje em dia por causa de suas muitas vantagens, como 
+ser parte do JavaScript, sendo, portanto, mais leve. JSON e XML são usados ​​para empacotar informações no modelo Ajax.
+
+
+*/
+
+//requisição assincrona
+
+
