@@ -47,5 +47,17 @@ Ao contrário do callback, não é possível usar diversos parâmetros, a forma 
 
 ********************************
 
+************Async Await************
+
+O problema de trabalhar com várias promises aninhadas é que vc acaba se perdendo no que se chama "promise hell"
+
+para evitar isso é usado Async Await.
+
+É uma forma de escrever promises mas sem o .then() e .catch()
+
+
+
+
+********************************
 
 

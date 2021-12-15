@@ -221,6 +221,7 @@ enviarEmail("Olá mundo", "victor@udemy.com").then((dados) => { // then tem aces
 
 */
 
+/*
 //Várias promises aninhadas
 
 
@@ -275,3 +276,171 @@ pegarId().then((id) => {
 
 
 })
+
+*/
+
+//Async Await
+
+/*
+function pegarUsuarios(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+
+        
+        resolve([
+            {name:'Rodolfo',lang:'js'},
+            {name:'joao',lang:'java'},
+            {name:'Juliana',lang:'C#'}
+        ])
+    },3000)
+    })
+}
+
+
+
+async function principal(){
+    var usuarios = await pegarUsuarios();
+    console.log(usuarios);
+    console.log("olá");
+}
+
+principal();
+
+
+*/
+
+//Async Await: convertendo o código
+
+
+/*
+
+function pegarId() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(5)
+        }, 1500)
+    })
+}
+
+function buscarEmailNoBanco() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("victorlima@guia.com.br")
+        }, 2000)
+    })
+}
+
+function enviarEmail(corpo, para) {
+    return new Promise((resolve, reject) => { 
+
+        setTimeout(() => {
+
+            var deuErro = false;
+
+
+            if (!deuErro) {
+
+                resolve({ time: 6, to: "victor@udemy.com" })//Promessa OK!!
+
+            } else {
+
+                reject("erro 123, e-mail não enviado")//foi mal,eu falhei :(
+
+            }
+
+        }, 2000)
+    });
+}
+
+
+async function principal() {
+    var id = await pegarId(id);
+    var email = await buscarEmailNoBanco(id);
+    
+
+    enviarEmail("Olá como vai ", email).then(()=>{
+        console.log("E-mail enviado!")
+    }).catch((err)=>{
+        console.log(err)
+    })
+
+}
+
+principal();
+/*
+pegarId().then((id) => {
+    buscarEmailNoBanco(id).then((email) => {
+        enviarEmail("Olá,como vai? ", email).then(() => {
+            console.log('E-mail enviado, para o usuário com id: ' +id)
+
+        }).catch(err => {
+            console.log(err);
+        })
+    })
+
+
+})
+*/
+
+//Async Await: tratando erros
+
+
+function pegarId() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(5)
+        }, 1500)
+    })
+}
+
+function buscarEmailNoBanco() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("victorlima@guia.com.br")
+        }, 2000)
+    })
+}
+
+function enviarEmail(corpo, para) {
+    return new Promise((resolve, reject) => {
+
+        setTimeout(() => {
+
+            var deuErro = true;
+
+
+            if (!deuErro) {
+
+                resolve({ time: 6, to: "victor@udemy.com" })//Promessa OK!!
+
+            } else {
+
+                reject("erro 123, e-mail não enviado")//foi mal,eu falhei :(
+
+            }
+
+        }, 2000)
+    });
+}
+
+
+async function principal() {
+    var id = await pegarId(id);
+    var email = await buscarEmailNoBanco(id);
+    
+
+    try {
+        await enviarEmail("Olá como vai ", email)
+        console.log('E-mail enviado com sucesso')
+
+    } catch (erro) {
+        console.log(erro)
+
+    }
+
+}
+
+principal();
+
+
+
