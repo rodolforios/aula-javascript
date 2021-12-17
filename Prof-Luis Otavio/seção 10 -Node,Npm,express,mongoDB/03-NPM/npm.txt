@@ -1,0 +1,91 @@
+NPM é um gerenciador de instalação
+
+nesta aula usei os seguintes comandos:
+
+npm init -y(dessa forma ele gerou um arquivo json com algumas info)
+
+ex:
+
+{
+  "name": "03-NPM",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"}
+
+
+  depois eu instalei o express com o comandos
+
+  npm install express
+
+  e foi acrescentado dependencies e a versão do express no arquivo
+  json.
+
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+
+  o circunflexo ao lado do digito 4 significa que o express
+  será sempre atualizado automáticamente, caso precise que a 
+  versão permaceça a mesma instalada basta digitar o seguinte comandos
+  npm install express -E
+
+para mudar a dependencies para devDependencies digite
+
+npm install express --save-dev
+
+para voltar para dependecies digite
+
+
+supondo que o meu projeto dependa de uma versão especifica do node
+para funcionar, então digite
+npm install express@2.1.0(os 3 números após o @ indicam a versão)
+
+Sobre a versão do express, seus digitos significam major,minor e patch
+
+
+
+- Major geralmente indica uma quebra de compatibilidade
+com versões mais antigas.Quando uma versão está com o circunflexo
+(^2.1.0).Quando vc digita update,são alterados apenas o minor e o Patch.
+
+-Minor geralmente é alterado quando é implantado um recurso novo
+
+
+-Patch geralmente é atualizado após correção de bugs.Quando na frente
+do número da versão existe um ~ (~2.1.0) significa que só o patch será
+alterado.
+
+
+para instalar a versão mais atualizada de um major digite
+npm install express@4.x
+
+para instalar a versão atualizada de um express digite
+npm update
+
+para desinstalar o express digite
+ npm uninstall express
+
+ para listar os pacotes instalados
+ npm ls --depth=0  (o comando depth indica a profundidade da lista
+ que será exibida, pois o comando npm ls sozinho mostra todas as 
+ ramificações, mesmo as que não instalamos)
+
+
+ como saber quais dos meus pacotes estão desatualizados, digite:
+
+ npm outdated
+
+ serão exibidos 4 campos:
+
+-Package 
+-Current(a versão instalada)
+-Wanted (versão mais indicada dentro da major)
+-Latest(a última versão lançada do package, independente da major)
+
+ 
