@@ -1,0 +1,149 @@
+O módulo de sistema de arquivos Node.js permite que você trabalhe com o sistema de arquivos em seu computador.
+
+Para incluir o módulo File System, use o require()método:
+
+var fs = require('fs');
+
+Uso comum para o módulo File System:
+
+-Ler arquivos
+-Criar arquivos
+-Atualizar arquivos
+-Deletar arquivos
+-Renomear arquivos
+
+*****Leia os arquivos****
+
+O fs.readFile()método é usado para ler arquivos em seu computador.
+
+Suponha que temos o seguinte arquivo HTML (localizado na mesma pasta que Node.js):
+
+<html>
+<body>
+<h1>My Header</h1>
+<p>My paragraph.</p>
+</body>
+</html>
+
+usando o código abaixo você irá executar o arquivo através do link:
+
+http: // localhost: 8080
+
+var http = require('http');
+var fs = require('fs');
+http.createServer(function (req, res) {
+  fs.readFile('demofile1.html', function(err, data) {
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.write(data);
+    return res.end();
+  });
+}).listen(8080);
+
+*****Criar arquivos*****
+O módulo File System possui métodos para criar novos arquivos:
+
+fs.appendFile()
+fs.open()
+fs.writeFile()
+
+-O fs.appendFile()método anexa o conteúdo especificado a um arquivo. 
+Se o arquivo não existir, o arquivo será criado:
+
+var fs = require('fs');
+
+fs.appendFile('mynewfile1.txt', 'Hello content!', function (err) {
+  if (err) throw err;
+  console.log('Saved!');
+});
+
+-O fs.open()método recebe um "sinalizador" como segundo argumento, 
+se o sinalizador for "w" para "gravação", o arquivo especificado será
+ aberto para gravação. Se o arquivo não existir, um arquivo vazio 
+ será criado:
+
+ var fs = require('fs');
+
+fs.open('mynewfile2.txt', 'w', function (err, file) {
+  if (err) throw err;
+  console.log('Saved!');
+});
+
+-O fs.writeFile()método substitui o arquivo e o conteúdo 
+especificados, se existir. Se o arquivo não existir, um novo 
+arquivo, contendo o conteúdo especificado, será criado:
+
+
+*****Arquivos de atualização*****
+
+O módulo File System tem métodos para atualizar arquivos:
+
+- fs.appendFile()
+- fs.writeFile()
+
+O fs.appendFile() método anexa o conteúdo especificado no final do 
+arquivo especificado:
+
+Exemplo:
+
+Anexe "Este é o meu texto." ao final do arquivo "mynewfile1.txt":
+
+var fs = require('fs');
+
+fs.appendFile('mynewfile1.txt', ' This is my text.', function (err) {
+  if (err) throw err;
+  console.log('Updated!');
+});
+
+
+
+
+-O fs.writeFile() substitui o arquivo e o conteúdo especificados:
+
+Exemplo:
+
+Substitua o conteúdo do arquivo "mynewfile3.txt":
+
+var fs = require('fs');
+
+fs.writeFile('mynewfile3.txt', 'This is my text', function (err) {
+  if (err) throw err;
+  console.log('Replaced!');
+});
+
+
+*****Deletar arquivos*****
+
+Para excluir um arquivo com o módulo Sistema de Arquivos, use o fs.unlink() método.
+
+O fs.unlink()método exclui o arquivo especificado:
+
+Exemplo:
+
+Exclua "mynewfile2.txt":
+
+var fs = require('fs');
+
+fs.unlink('mynewfile2.txt', function (err) {
+  if (err) throw err;
+  console.log('File deleted!');
+});
+
+
+
+*****Renomear arquivos*****
+
+Para renomear um arquivo com o módulo Sistema de Arquivos, 
+use o fs.rename().
+
+O fs.rename()método renomeia o arquivo especificado:
+
+Exemplo;
+
+Renomeie "mynewfile1.txt" para "myrenamedfile.txt":
+
+var fs = require('fs');
+
+fs.rename('mynewfile1.txt', 'myrenamedfile.txt', function (err) {
+  if (err) throw err;
+  console.log('File Renamed!');
+});
