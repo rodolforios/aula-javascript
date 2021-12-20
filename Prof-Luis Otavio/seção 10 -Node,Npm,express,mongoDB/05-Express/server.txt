@@ -1,0 +1,24 @@
+npm innit -y
+
+npm install express
+
+express é um micro framework
+
+CRUD -> CREATE,READ,UPDATE,DELETE
+        POST   GET   PUT   DELETE
+
+
+//http://meusite.com/<- GET -> Entregue a página
+
+//http://meusite.com/sobre <- GET -> Entregue a página/sobre
+
+//http://meusite.com/contato <- GET -> Entregue a página/contato
+
+
+O primeiro parametro é a rota e o segundo é uma função
+
+A função recebe dois parâmetros: req e res.
+app.get('/', (req,res)=>{
+
+    
+})
