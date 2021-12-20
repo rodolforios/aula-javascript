@@ -1,0 +1,7 @@
+
+npm install nodemon --save-dev
+
+npx nodemon server.js
+
+Sempre verifique o diretório que vc está antes de começar a rodar
+o nodemon
