@@ -1,0 +1,6 @@
+é necessário usar uma engine para poder manipular
+códigos dentro do HTML
+
+Nesta aula foi usada o ejs
+
+npm i ejs
