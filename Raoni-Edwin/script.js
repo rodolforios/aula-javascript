@@ -14,3 +14,10 @@ function ordenaNumeros(a, b) {
 var unico = lista_numeros.filter(function (elem, index, self) {
     return index === self.indexOf(elem);
 });
+
+
+
+
+
+
+

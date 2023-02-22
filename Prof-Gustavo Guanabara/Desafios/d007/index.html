@@ -40,11 +40,11 @@
             
             var res = document.querySelector('div#res')
             
-            var us = (5.25*r)
+            var us = (r / 5.25)
             var real = r.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
             var uss = us.toLocaleString('en-US',{style: 'currency', currency: 'USD'});
 
-            res.innerHTML =`Você fez bosta ${real} reais e conseguirá trocar por ${uss} dolares. `
+            res.innerHTML =`Você tem  ${real} reais e conseguirá trocar por ${uss} dolares. `
             
             
 
